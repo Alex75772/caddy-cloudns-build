@@ -28,7 +28,7 @@ jobs:
       working-directory: ${{ github.workspace }}
 
     - name: Upload Caddy binary
-      uses: actions/upload-artifact@v2  # Using v2 (latest stable)
+      uses: actions/upload-artifact@6f2c6b2a6d0ee0fddf9e1a2f9a92d712a1d1303b
       with:
         name: xcaddy
         path: xcaddy
