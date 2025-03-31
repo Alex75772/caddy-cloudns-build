@@ -18,9 +18,10 @@ jobs:
       with:
         go-version: '1.21'  # Latest Go version
 
-    - name: Install xcaddy
-      run: |
-        curl -sSL https://github.com/caddyserver/xcaddy/releases/download/v0.3.0/xcaddy_0.3.0_linux_amd64.tar.gz | tar -xz -C $HOME/.local/bin
+- name: Install xcaddy
+  run: |
+    mkdir -p $HOME/.local/bin  # Create the directory if it doesn't exist
+    curl -sSL https://github.com/caddyserver/xcaddy/releases/download/v0.3.0/xcaddy_0.3.0_linux_amd64.tar.gz | tar -xz -C $HOME/.local/bin
 
     - name: Build Caddy with CloudNS plugin
       run: |
